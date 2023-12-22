@@ -23,11 +23,15 @@ System.out.println(this.StudentRepository.findAll());
         return "saved";
     }
     public String delete(Student S){
-        this.StudentRepository.delete(S);
-        return "deleted";
+     this.StudentRepository.delete(S);
+return "deleted";
+
     }
-    public Optional<Student> getOne(Long id){
-      Optional<Student> U=  this.StudentRepository.findById(id);
-   return U;
+    public Student getOne(Long id){
+      return StudentRepository.findById(id).get();
+
     }
+     public Student Update(Student S){
+        return this.StudentRepository.save(S);
+     }
 }

@@ -9,8 +9,8 @@
           crossorigin="anonymous">
 </head>
 <body>
-<h1>Creat new Student</h1>
-<form th:action="@{/Student/Save}" th:object ="${student}" method="post">
+<h1> Update Student</h1>
+<form th:action="@{/Student/{id} (id=${student.id_student})}"  th:object ="${student}" method="post">
 
 
     <div class="mb-3">
@@ -28,7 +28,7 @@
         <label class="form-label">CNE</label>
         <input type="text" class="form-control" th:field="*{CNE}">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" >Update</button>
 </form>
 </body>
 </html>

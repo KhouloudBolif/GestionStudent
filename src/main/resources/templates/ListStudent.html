@@ -11,7 +11,7 @@
 <body>
 <div class="container">
   <h1>Liste of Students</h1>
-  <button type="button" class="btn btn-outline-info " th:href="@{/Save/new}">Add Student</button>
+  <a type="button" class="btn btn-outline-info " th:href="@{/Save/new}">Add Student</a>
   <table class="table ">
     <thead>
     <tr>
@@ -30,8 +30,8 @@
       <td th:text="${student.prenom}"></td>
       <td th:text="${student.age}"></td>
       <td th:text="${student.CNE}"></td>
-      <td><button type="button" class="btn btn-outline-danger">Delete</button></td>
-      <td><button type="button" class="btn btn-outline-warning">Update</button></td>
+      <td><a class="btn btn-outline-danger" th:href="@{/Student/Delete/{id}(id=${student.id_student})}">Delete</a></td>
+      <td><a  class="btn btn-outline-warning" th:href="@{/Student/Update/{id}(id=${student.id_student})}" >Update</a></td>
 
     </tr>
 
