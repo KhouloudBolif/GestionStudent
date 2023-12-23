@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.security.PrivateKey;
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -25,6 +27,7 @@ public class Student {
     private Long age;
     @Column(name = "CNE",nullable = true)
     private String CNE;
-
+@OneToMany(mappedBy = "student")
+    private List<Absence> absenceList;
 
 }

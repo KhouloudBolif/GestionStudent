@@ -10,7 +10,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories("com.example.GestionStudent.Repository")
 @ComponentScan("com.example.GestionStudent.Services")
 @ComponentScan("com.example.GestionStudent.Controller")
+
 @SpringBootApplication
+
 public class GestionStudentApplication {
 
 	public static void main(String[] args) {

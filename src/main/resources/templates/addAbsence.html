@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Absence</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+          crossorigin="anonymous">
+</head>
+<body>
+<h1>Creat new Student</h1>
+<form th:action="@{/added}" th:object ="${absence}" method="post">
+
+
+    <div class="mb-3">
+        <label class="form-label">jour</label>
+        <input type="text" class="form-control" th:field="*{jour}">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">id student</label>
+        <input type="text" class="form-control" th:field="*{student.id_student}">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Nom student</label>
+        <input type="text" class="form-control" th:field="*{student.nom}">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">prenom student</label>
+        <input type="text" class="form-control" th:field="*{student.prenom}">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</body>
+</html>
